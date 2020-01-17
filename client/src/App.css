@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+.allPlayersContainer {
+  justify-content: center;
+}
+
+.playerCard {
+  border: solid black 1px;
+  margin: 1%;
+}
