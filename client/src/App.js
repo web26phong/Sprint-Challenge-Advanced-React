@@ -9,23 +9,20 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    console.log("app did mount")
     Axios
     .get(`http://localhost:5000/api/players`)
     .then(res => {
-      console.log("app mounted, so getting data and setting data to state")
       this.setState({
         players: res.data
         
       })
     })
     .catch(err => {
-      console.log(err)
+      console.log("There seems to be a problem!")
     })
   }
 
   render(){
-    console.log("app rendered")
     return (
     <div className="App">
       <Players players={this.state.players}/>
