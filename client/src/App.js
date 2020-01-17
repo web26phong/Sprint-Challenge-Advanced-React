@@ -1,5 +1,6 @@
 import React from 'react';
 import Axios from "axios";
+import Players from "./components/Players";
 import './App.css';
 
 class App extends React.Component {
@@ -27,16 +28,7 @@ class App extends React.Component {
     console.log("app rendered")
     return (
     <div className="App">
-      <h1>Women's World Cup Players Search Interest from Google Trends</h1>
-      <div className="allPlayersContainer">
-        {this.state.players.map(player => (
-          <div className="playerCard" key={player.id}>
-            <h2>{player.name}</h2>
-            <h3>Country: {player.country}</h3>
-            <h3>Searches: {player.searches}</h3>
-          </div>
-        ))}
-      </div>
+      <Players players={this.state.players}/>
     </div>
     );
   }
